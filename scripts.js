@@ -36,7 +36,7 @@ start();
  */
 
 function askForShift(s){
-    var n = prompt('Hversu mikið á að hliðra um?');
+    var n = prompt('Hversu mikið á að hliðra um? Veldu heiltölu á bilinu [1, 31]');
     if (n >= 1 && n <= 31){
     askForString(s,parseInt(n))
     }
@@ -47,7 +47,7 @@ function askForShift(s){
     }
 }
 function askForString(s,n){
-    var input = prompt('Hvaða orð á að kóða?');
+    var input = prompt(`Gefðu upp strenginn sem á að kóða með hliðrun ${n}`);
     if (s === "kóða"){
         alert(encode(input.toUpperCase(),n))
     }
